@@ -5,195 +5,235 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Design By Meg</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
       color: #333;
-      background: #f9f9f9;
     }
+
     header {
-      background: #fff;
+      background: rgba(255, 255, 255, 0.95);
       padding: 1rem 2rem;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
     }
+
     header h1 {
+      color: #667eea;
       font-size: 2rem;
-      font-weight: 600;
     }
-    nav a {
-      margin-left: 2rem;
-      text-decoration: none;
-      color: #0073aa;
-      font-weight: 500;
-    }
-    nav a:hover {
-      color: #005a87;
-    }
+
     .hero {
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: white;
       padding: 4rem 2rem;
       text-align: center;
+      margin-bottom: 3rem;
     }
+
     .hero h2 {
       font-size: 3rem;
       margin-bottom: 1rem;
     }
+
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       opacity: 0.9;
     }
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 2rem;
-    }
+
     .posts {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
       display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 2rem;
-      margin-top: 2rem;
+      margin-bottom: 3rem;
     }
+
     .post-card {
       background: white;
       border-radius: 8px;
       padding: 1.5rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .post-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
     }
+
     .post-card h3 {
-      font-size: 1.5rem;
+      color: #667eea;
       margin-bottom: 0.5rem;
-      color: #0073aa;
+      font-size: 1.3rem;
     }
-    .post-card .meta {
-      font-size: 0.9rem;
+
+    .post-card .date {
       color: #999;
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .post-card p {
+      color: #555;
+      line-height: 1.6;
       margin-bottom: 1rem;
     }
-    .post-card p {
-      color: #666;
-      line-height: 1.7;
+
+    .post-card a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
     }
-    .loading {
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.1rem;
-      color: #999;
+
+    .post-card a:hover {
+      color: #764ba2;
     }
-    .error {
-      background: #fee;
-      border-left: 4px solid #f00;
-      padding: 1rem;
-      margin: 1rem 0;
-      color: #c00;
-    }
+
     footer {
-      background: #333;
-      color: white;
+      background: rgba(255, 255, 255, 0.95);
       text-align: center;
       padding: 2rem;
       margin-top: 3rem;
+      color: #666;
+      border-top: 1px solid #ddd;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      color: white;
+      font-size: 1.1rem;
+    }
+
+    .error {
+      background: #ff6b6b;
+      color: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      margin: 2rem;
+      text-align: center;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .error strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .error a {
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Design By Meg</h1>
-    <nav>
-      <a href="/">Home</a>
-      <a href="#portfolio">Portfolio</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <h1>🎨 Design By Meg</h1>
   </header>
 
   <div class="hero">
     <h2 id="site-title">Design By Meg</h2>
-    <p>Professional Web & Graphic Design Services</p>
+    <p>Creative Design Solutions</p>
   </div>
 
-  <div class="container">
-    <h2>Recent Projects</h2>
-    <div id="posts" class="posts">
-      <div class="loading">Loading content...</div>
-    </div>
-  </div>
+  <div id="loading" class="loading">Loading posts from Firestore...</div>
+  <div id="error" class="error" style="display:none;"></div>
+  <div id="posts" class="posts"></div>
 
   <footer>
-    <p>&copy; 2026 Design By Meg. All rights reserved.</p>
-    <p>Hosted on <strong>Firebase Hosting</strong> with Cloud Functions</p>
+    <p>&copy; 2024 Design By Meg. All rights reserved.</p>
+    <p>Hosted on <strong>Firebase Hosting</strong> (Free Tier) with Firestore</p>
   </footer>
 
-  <script>
-    // Fetch and display WordPress posts
-    async function loadPosts() {
-      const postsContainer = document.getElementById('posts');
-      try {
-        const response = await fetch('/api/wp?action=posts&type=post&limit=10');
-        const data = await response.json();
+  <!-- Firebase SDK - Direct Firestore Access (No Cloud Functions) -->
+  <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js';
+    import { getFirestore, collection, query, where, orderBy, limit, getDocs } from 'https://www.gstatic.com/firebasejs/10.7.2/firebase-firestore.js';
 
-        if (!data.success || data.posts.length === 0) {
-          postsContainer.innerHTML = '<p class="error">No posts found. Check your Firebase setup.</p>';
+    // Firebase config for designedbymeg-355ff
+    const firebaseConfig = {
+      apiKey: "AIzaSyBKl38rxI3Wj64Kp6n6lU9V-bHvP3r4ILc",
+      authDomain: "designedbymeg-355ff.firebaseapp.com",
+      projectId: "designedbymeg-355ff",
+      storageBucket: "designedbymeg-355ff.appspot.com",
+      messagingSenderId: "724969050379",
+      appId: "1:724969050379:web:e8bffe0c8e6e7c1d4a0e69"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
+
+    async function loadPosts() {
+      try {
+        const postsRef = collection(db, 'wp_posts');
+        const q = query(
+          postsRef,
+          where('post_status', '==', 'publish'),
+          where('post_type', '==', 'post'),
+          orderBy('post_date', 'desc'),
+          limit(10)
+        );
+
+        const querySnapshot = await getDocs(q);
+        const postsContainer = document.getElementById('posts');
+        const loadingDiv = document.getElementById('loading');
+
+        if (querySnapshot.empty) {
+          loadingDiv.innerHTML = '<p style="color: white; text-align: center; margin-top: 2rem;">📝 No posts found in Firestore.</p>';
           return;
         }
 
-        postsContainer.innerHTML = data.posts
-          .map(post => `
-            <div class="post-card">
-              <h3>${escapeHtml(post.post_title || 'Untitled')}</h3>
-              <div class="meta">
-                <small>Published: ${new Date(post.post_date).toLocaleDateString()}</small>
-              </div>
-              <p>${escapeHtml((post.post_excerpt || post.post_content || '').substring(0, 200))}</p>
-              <a href="#post-${post.ID}" style="color: #0073aa; font-weight: 500;">Read More →</a>
-            </div>
-          `)
-          .join('');
+        loadingDiv.style.display = 'none';
+
+        querySnapshot.forEach(doc => {
+          const post = doc.data();
+          const postCard = document.createElement('div');
+          postCard.className = 'post-card';
+          const postDate = post.post_date ? new Date(post.post_date).toLocaleDateString() : 'No date';
+          const excerpt = post.post_excerpt || (post.post_content ? post.post_content.substring(0, 150) : 'No excerpt');
+          postCard.innerHTML = `
+            <h3>${post.post_title || 'Untitled'}</h3>
+            <div class="date">${postDate}</div>
+            <p>${excerpt}</p>
+            <a href="/post/${post.ID || doc.id}">Read More →</a>
+          `;
+          postsContainer.appendChild(postCard);
+        });
       } catch (error) {
         console.error('Error loading posts:', error);
-        postsContainer.innerHTML = `<p class="error">Error loading posts: ${error.message}</p>`;
+        const errorDiv = document.getElementById('error');
+        errorDiv.innerHTML = `
+          <strong>⚠️ Firestore Setup Required</strong>
+          Error: ${error.message}<br><br>
+          <strong>To activate your site:</strong><br>
+          1. Go to <a href="https://console.firebase.google.com/project/designedbymeg-355ff/firestore" target="_blank">Firebase Console</a><br>
+          2. Create Firestore Database collection named "wp_posts"<br>
+          3. Import WordPress posts from your SQL database<br>
+          4. Update Firestore security rules to allow reads<br><br>
+          <em>No paid plan required - Free tier supports this!</em>
+        `;
+        errorDiv.style.display = 'block';
+        document.getElementById('loading').style.display = 'none';
       }
     }
 
-    // Load site info
-    async function loadSiteInfo() {
-      try {
-        const response = await fetch('/api/wp?action=site_info');
-        const data = await response.json();
-        if (data.success && data.info) {
-          document.getElementById('site-title').textContent = data.info.title || 'Design By Meg';
-          document.title = data.info.title || 'Design By Meg';
-        }
-      } catch (error) {
-        console.warn('Could not load site info:', error.message);
-      }
-    }
-
-    function escapeHtml(text) {
-      const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;',
-      };
-      return text.replace(/[&<>"']/g, m => map[m]);
-    }
-
-    // Initialize on page load
-    window.addEventListener('DOMContentLoaded', () => {
-      loadSiteInfo();
-      loadPosts();
-    });
+    // Load posts on page load
+    loadPosts();
   </script>
 </body>
 </html>
