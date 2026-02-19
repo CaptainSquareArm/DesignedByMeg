@@ -1,4 +1,8 @@
 {
+  "functions": {
+    "source": "functions",
+    "runtime": "node18"
+  },
   "hosting": {
     "public": "public",
     "ignore": [
@@ -6,6 +10,12 @@
       ".firebaserc",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "/api/**",
+        "function": "wp"
+      }
     ]
   }
 }
