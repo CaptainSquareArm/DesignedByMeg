@@ -1,0 +1,31 @@
+/*
+Theme Name: Bridge
+Theme URI: http://bridgelanding.qodeinteractive.com/
+Description: Creative Multipurpose WordPress Theme
+Tags: one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, custom-menu, featured-images, flexible-header, post-formats, sticky-post, threaded-comments, translation-ready
+Author: Qode Interactive
+Author URI: http://qodethemes.com/
+Text Domain: bridge
+Version: 28.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+
+CSS changes can be made in files in the /css/ folder. This is a placeholder file required by WordPress, so do not delete it.
+
+*/
+
+.mobile_menu_button { float: right; margin-right: 0;}
+
+@media only screen and (min-width: 1000px) and (max-width: 1200px) {
+	.header_top .container_inner { width: 100%;}
+}
+
+@media only screen and (max-width: 1000px) {
+	.logo_wrapper { position: relative; left: 0;}
+	.q_logo a { left: 0;}
+}
+@media only screen and (max-width: 600px) {
+	.q_logo img { max-width: 65vw;}
+	.header_bottom {padding: 0 20px;}
+	.header_bottom .container_inner { width: 100%;}
+}

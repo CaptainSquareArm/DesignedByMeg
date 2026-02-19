@@ -1,0 +1,25 @@
+# Dependencies and build outputs
+node_modules/
+.npm
+
+# Firebase
+.firebaserc
+.firebase/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment and secrets
+.env
+.env.local
+*.pem
+
+# OS
+Thumbs.db
+.DS_Store

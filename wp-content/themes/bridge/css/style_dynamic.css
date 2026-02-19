@@ -1,0 +1,543 @@
+
+				
+		
+		
+								
+					body{
+											font-family: 'Poppins', sans-serif;
+						 color: #212120; 			 font-size: 14px; 			font-weight: 400;			}
+							body,
+				.wrapper,
+				.content,
+				.full_width,
+				.overlapping_content .content > .container,
+				.more_facts_holder,
+				.comment_holder .comment #respond textarea,
+				.comment_holder .comment #respond input[type='text'],
+				.comment_holder .comment #respond input[type='email'],
+				.content .container
+				{
+				background-color:#faf7ed;
+				}
+				.angled-section polygon{
+				fill: #faf7ed;
+				}
+				
+											
+		
+		
+					.header_bottom,
+			.header_top,
+			.fixed_top_header .bottom_header{
+			background-color: rgba(255,255,255,0);
+			}
+
+			
+				.header_bottom,
+				.header_top,
+				.fixed_top_header .bottom_header{
+				border-bottom: 0;
+				}
+
+				.header_bottom,
+				.fixed_top_header .bottom_header{
+				box-shadow: none;
+				}
+
+				.header_top .right .inner > div:first-child,
+				.header_top .right .inner > div,
+				.header_top .left .inner > div:last-child,
+				.header_top .left .inner > div {
+				border: none;
+				}
+
+			
+		
+																
+		
+
+
+		
+		
+			.header_top,
+			.fixed_top_header .top_header,
+			.fixed_top_header nav.mobile_menu{
+			background-color: rgba(255,255,255,0);
+			}
+						
+		
+		
+		
+
+														.content{
+					margin-top: -133px;
+					}
+				
+					
+								
+		
+		
+		
+						header.fixed_hiding .q_logo a,
+				header.fixed_hiding .q_logo{
+				max-height: 26px;
+				}
+				
+		
+		
+		
+				
+		
+		
+					nav.main_menu > ul > li > a{
+			 color: #212120; 							font-family: 'Poppins', sans-serif;
+						 font-size: 18px; 									 font-weight: 400; 			 letter-spacing: 4px; 			 text-transform: uppercase; 			}
+
+		
+					nav.main_menu > ul > li:not(:first-child):before {
+			color: #faf7ed;
+			}
+		
+					nav.main_menu ul li:hover a {
+			 color: #e22246; 			}
+		
+					nav.main_menu ul li.active a {
+			color: #e69bc2			}
+			
+		
+
+		
+
+																		
+
+						
+		
+		
+		
+					nav.mobile_menu ul li a,
+			nav.mobile_menu ul li h3{
+			 color: #212120; 							font-family: 'Poppins', sans-serif;
+						 font-size: 14px; 									 font-weight: 400; 							letter-spacing: 4px;
+										text-transform: uppercase;
+						}
+
+		
+					nav.mobile_menu ul li span.mobile_arrow i, nav.mobile_menu ul li span.mobile_arrow i {
+			color: #212120;
+			}
+		
+					nav.mobile_menu ul li a:hover,
+			nav.mobile_menu ul li.active > a,
+			nav.mobile_menu ul li.current-menu-item > a{
+			color: #e22246;
+			}
+							nav.mobile_menu ul li,
+			nav.mobile_menu ul li,
+			nav.mobile_menu ul li ul li,
+			nav.mobile_menu ul li.open_sub > ul{
+			border-color: #faf7ed;
+			}
+		
+					@media only screen and (max-width: 1000px){
+			.header_bottom,
+			nav.mobile_menu,
+			header.fixed_top_header .top_header{
+			background-color: #faf7ed !important;
+			}
+			}
+							@media only screen and (max-width: 1000px){
+			.header_top{
+			background-color: #faf7ed !important;
+			}
+			}
+				
+		
+		
+		
+				
+		
+																
+
+					p,
+            body.qode-overridden-elementors-fonts .elementor-widget-heading p.elementor-heading-title {
+			color: #212120;							font-family: 'Poppins', sans-serif;
+						font-size: 14px;						font-style: normal;			font-weight: 400;									}
+			.filter_holder ul li span,
+			blockquote h5,
+			.q_social_icon_holder .simple_social,
+			.header-widget.widget_nav_menu ul.menu li a,
+			.side_menu a,
+			.side_menu li,
+			.side_menu span,
+			.side_menu p,
+			.side_menu .widget.widget_rss li a.rsswidget,
+			.side_menu #wp-calendar caption,
+			.side_menu #wp-calendar th,
+			.side_menu #wp-calendar td,
+			aside .widget #lang_sel_list li a,
+			aside .widget #lang_sel li a,
+			aside .widget #lang_sel_click li a,
+			.wpb_widgetised_column .widget #lang_sel_list li a,
+			.wpb_widgetised_column .widget #lang_sel li a,
+			.wpb_widgetised_column .widget #lang_sel_click li a,
+            .elementor-widget.elementor-widget-sidebar .widget #lang_sel_list li a,
+            .elementor-widget.elementor-widget-sidebar .widget #lang_sel li a,
+            .elementor-widget.elementor-widget-sidebar .widget #lang_sel_click li a,
+			section.side_menu #lang_sel_list li a,
+			section.side_menu #lang_sel li a,
+			section.side_menu #lang_sel_click li a,
+			footer #lang_sel_list li a,
+			footer #lang_sel li a,
+			footer #lang_sel_click li a,
+			footer #lang_sel_list.lang_sel_list_horizontal a,
+			footer #lang_sel_list.lang_sel_list_vertical a,
+			.side_menu #lang_sel_list.lang_sel_list_horizontal a,
+			.side_menu #lang_sel_list.lang_sel_list_vertical a,
+			#lang_sel_footer a{
+			color: #212120;			}
+			.header_top #lang_sel > ul > li > a,
+			.header_top #lang_sel_click > ul > li> a,
+			footer #lang_sel ul li a,
+			footer #lang_sel ul ul a,
+			footer #lang_sel_click ul li a,
+			footer #lang_sel_click ul ul a,
+			footer #lang_sel_click ul ul a span,
+			section.side_menu #lang_sel ul li a,
+			section.side_menu #lang_sel ul ul a,
+			section.side_menu #lang_sel ul ul a:visited,
+			section.side_menu #lang_sel_click > ul > li > a,
+			section.side_menu #lang_sel_click ul ul a,
+			section.side_menu #lang_sel_click ul ul a:visited{
+			color: #212120 !important;			}
+									
+
+		
+				
+				
+		
+		
+
+		
+		
+		
+										
+		
+		
+		
+						.google_map{
+				height: 750px;
+				}
+				
+		
+		
+		
+								
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+
+		
+		
+
+												
+										
+								
+								
+										
+										
+								
+								
+		
+														
+								
+								
+								
+				
+						
+						
+		/*Blog Masonry Gallery - end */
+
+								
+						
+						
+								
+												
+								
+
+		
+						
+				
+		
+
+		
+				
+
+										
+		
+
+												
+				
+				
+		
+								
+								
+								
+		
+																																																				
+							.side_menu_button > a,
+			.mobile_menu_button span,
+			.fixed_top_header .side_menu_button > a,
+			.fixed_top_header .popup_menu .line,
+			.fixed_top_header .mobile_menu_button span{ color: #212120;font-size: 40px; }
+
+			.popup_menu .line,
+			.popup_menu .line:after, .popup_menu .line:before{
+			background-color: #212120;
+			}
+					.side_menu_button > a:hover,
+			.mobile_menu_button span:hover,
+			.popup_menu:hover .line,
+			.popup_menu:hover .line:after,
+			.popup_menu:hover .line:before{ color: #e22246; }
+
+			.popup_menu:hover .line,
+			.popup_menu:hover .line:after, .popup_menu:hover .line:before{
+			background-color: #e22246;
+			}
+		
+		
+		.vertical_menu_float .menu-item .second{
+		left: calc(100% + 30px); /*because of the padding*/
+		}
+
+		.vertical_menu_hidden aside.vertical_menu_area .vertical_menu_float .menu-item .second {
+		left: calc(100% + 40px);
+		}
+
+
+		
+		
+		
+		
+
+
+							.vertical_menu_area{
+			text-align:left;
+			}
+			
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+																													.portfolio_main_holder .item_holder.thin_plus_only .thin_plus_only_icon {
+			font-family: 			}
+						
+							.cf7_custom_style_1  input.wpcf7-form-control.wpcf7-submit,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-submit:not([disabled]) {
+				background-color: #e22246;border-color: #e22246;border-width: 3px;border-top-left-radius: 40px;border-top-right-radius: 40px;border-bottom-right-radius: 40px;border-bottom-left-radius: 40px;color: #faf7ed;font-family: Poppins;font-size: 16px;font-weight: 500;letter-spacing: 4px;text-transform: uppercase;height: 60px;line-height: 60px;padding: 0 80px;				}
+			
+							.cf7_custom_style_1  input.wpcf7-form-control.wpcf7-submit:hover,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-submit:not([disabled]):hover {
+				color: #faf7ed;background-color: #212120;border-color: #212120;				}
+			
+							.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date,
+				.cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea,
+				.cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz{
+				background-color: #faf7ed;border-color: #e22246;border-width: 3px;border-style:solid;border-top: none; border-left: none; border-right: none;color: #7c7c7c;font-family: Poppins;font-size: 14px;font-weight: 400;text-transform: none;margin-bottom: 20px;				}
+			
+							.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-text:focus,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-number:focus,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-date:focus,
+				.cf7_custom_style_1 textarea.wpcf7-form-control.wpcf7-textarea:focus,
+				.cf7_custom_style_1 select.wpcf7-form-control.wpcf7-select:focus,
+				.cf7_custom_style_1 input.wpcf7-form-control.wpcf7-quiz:focus{
+				color: #7c7c7c;background-color: #faf7ed;border-color: #e22246;				}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+							.cf7_custom_style_1 ::-webkit-input-placeholder{
+				color: #7c7c7c;opacity:1;				}
+										.cf7_custom_style_1 :-moz-placeholder{
+				color: #7c7c7c;opacity:1;				}
+										.cf7_custom_style_1 ::-moz-placeholder{
+				color: #7c7c7c;opacity:1;				}
+										.cf7_custom_style_1 :-ms-input-placeholde{
+				color: #7c7c7c;opacity:1;				}
+																																		.cf7_custom_style_1 input:focus::-webkit-input-placeholder,
+				.cf7_custom_style_1 textarea:focus::-webkit-input-placeholder{
+				color: #7c7c7c;				}
+										.cf7_custom_style_1 input:focus:-moz-placeholder,
+				.cf7_custom_style_1 textarea:focus:-moz-placeholder{
+				color: #7c7c7c;				}
+										.cf7_custom_style_1 input:focus::-moz-placeholder,
+				.cf7_custom_style_1 textarea:focus::-moz-placeholder{
+				color: #7c7c7c;				}
+										.cf7_custom_style_1 input:focus:-ms-input-placeholder,
+				.cf7_custom_style_1 textarea:focus:-ms-input-placeholder{
+				color: #7c7c7c;				}
+																																
+		
+		
+				
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+		
+		
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+
+		
+		
+
+		
+		
+		
+									
+							
+		
+		
+				
+				
+				
+				
+										
+
+		
+		
+																
+
+						
+		
+
+		
+				    .masonry_gallery_item.square_big .masonry_gallery_item_inner .masonry_gallery_item_content{
+			text-align: center;		    }
+		
+		
+				    .masonry_gallery_item.square_small .masonry_gallery_item_inner .masonry_gallery_item_content{
+			text-align: center;		    }
+		
+		
+				    .masonry_gallery_item.rectangle_portrait .masonry_gallery_item_inner .masonry_gallery_item_content{
+			text-align: center;		    }
+		
+		
+				    .masonry_gallery_item.rectangle_landscape .masonry_gallery_item_inner .masonry_gallery_item_content{
+			text-align: center;		    }
+		
+
+	
+						
+		
+		
+
+				
+
+

@@ -1,0 +1,10 @@
+{
+  "name": "designbymeg-static-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "firebase emulators:start --only hosting",
+    "deploy": "firebase deploy --only hosting",
+    "lint": "echo \"No lint configured\""
+  }
+}
